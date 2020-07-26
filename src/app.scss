@@ -1,0 +1,105 @@
+.main-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px;
+
+  // =================== Items listing
+  .items-listing {
+    width: 500px;
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+
+    .items-listing__header {
+      margin: 25px;
+      text-align: center;
+    }
+
+    // Product container
+
+    .product {
+      margin: 20px;
+      border: 1px solid black;
+
+      display: flex;
+
+      .product__image {
+        margin: 20px;
+        max-width: 150px;
+        min-width: 150px;
+        max-height: 150px;
+        min-height: 150px;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .product-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: auto 20px auto 20px;
+
+        .product-info__header, .product-info__description, .product-info__cart-button {
+          margin: 5px;
+        }
+
+        .product-info__header {
+          .product-info__header__title {
+            float: left;
+          }
+          .product-info__header__price {
+            float: right;
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+
+    // shopping cart product item
+
+    .cart-item {
+      margin: 10px 10px 10px 20px;
+
+      display: flex;
+      .cart-item__details {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        .cart-item__details_row {
+          margin: 3px 0 3px 0;
+          .cart-item__details__row__left {
+            float: left;
+          }
+          .cart-item__details__row__right {
+            float: right;
+          }
+        }
+        .cart-item__details__divisor {
+          border: 1px solid black;
+        }
+      }
+
+      .cart-item__remove {
+        margin: 15px;
+        a {
+          text-align: center;
+          text-decoration: none;
+          cursor: pointer;
+          color: black;
+        }
+      }
+    }
+    .items-listing__total-price {
+      span {
+        margin: 30px 40px 10px 10px;
+        float: right;
+      }
+    }
+
+    // inventory item
+  }
+}
